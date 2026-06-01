@@ -2,7 +2,7 @@
 
 // ---- People ----
 const PEOPLE = {
-  cp: { id: "cp", name: "Camille Petit", initials: "CP", color: "#11181c", role: "Moi" },
+  cp: { id: "cp", name: "Guillaume Tirocco", initials: "GT", color: "#11181c", role: "Moi" },
   lm: { id: "lm", name: "Léa Martin", initials: "LM", color: "#5b7bd6", role: "Juridique" },
   kb: { id: "kb", name: "Karim Benali", initials: "KB", color: "#8a6ddb", role: "Finance" },
   sd: { id: "sd", name: "Sophie Dubois", initials: "SD", color: "#46a35e", role: "RH" },

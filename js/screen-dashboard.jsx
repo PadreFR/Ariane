@@ -114,7 +114,7 @@ function Dashboard({ navigate, onSearch, onOpenDoc, onOpenView, onTag, onUpload,
           <div style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: "var(--fs-xs)", color: "var(--text-muted)", background: "var(--slate-3)", padding: "5px 12px", borderRadius: "var(--r-full)", marginBottom: 18 }}>
             <Icon name="folderOff" size={13} /> Pas de dossiers. Pas de rangement. Juste retrouver.
           </div>
-          <h1 className="t-display" style={{ fontSize: "clamp(26px, 3.4vw, 38px)", margin: "0 0 8px" }}>{greet}, Camille.</h1>
+          <h1 className="t-display" style={{ fontSize: "clamp(26px, 3.4vw, 38px)", margin: "0 0 8px" }}>{greet}, Guillaume.</h1>
           <p className="muted" style={{ margin: "0 auto 26px", fontSize: "calc(var(--fs-base) + 1px)", maxWidth: 460, textWrap: "balance" }}>
             Décris ce que tu cherches en une phrase — comme tu le dirais à un collègue.
           </p>

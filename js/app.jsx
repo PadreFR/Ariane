@@ -66,7 +66,7 @@ function Sidebar({ route, navigate, onUpload }) {
       <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "4px 8px" }}>
         <Avatar id="cp" size={30} />
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: "var(--fs-sm)", fontWeight: 500, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>Camille Petit</div>
+          <div style={{ fontSize: "var(--fs-sm)", fontWeight: 500, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>Guillaume Tirocco</div>
           <div style={{ fontSize: 10.5, color: "var(--text-subtle)" }}>Direction</div>
         </div>
         <button className="btn btn-ghost btn-icon btn-sm" style={{ color: "var(--text-subtle)" }}><Icon name="settings" size={16} /></button>
