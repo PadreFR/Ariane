@@ -90,6 +90,11 @@ function TopBar({ route, navigate, onSearch }) {
           <span style={{ color: "var(--text)", fontWeight: 500 }}>{route.screen === "upload" ? "Dépôt d'un document" : "Accueil"}</span>
         </div>
         <div style={{ flex: 1 }} />
+        {route.screen === "dashboard" && (
+          <button className="btn btn-secondary btn-sm" onClick={() => navigate("create-view")}>
+            <Icon name="plus" size={14} /> Créer une vue
+          </button>
+        )}
         <button className="btn btn-ghost btn-icon"><Icon name="bell" size={18} /></button>
       </header>
     );
