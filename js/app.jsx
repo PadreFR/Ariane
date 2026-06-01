@@ -53,7 +53,12 @@ function Sidebar({ route, navigate, onUpload }) {
         <NavItem icon="inbox" label="À traiter" active={false} onClick={() => navigate("view", { viewId: "pending" })} badge={viewDocs(VIEWS[2]).length} />
       </nav>
 
-      <div style={{ fontSize: 10.5, fontWeight: 600, color: "var(--text-subtle)", textTransform: "uppercase", letterSpacing: ".05em", padding: "20px 10px 8px" }}>Mes vues</div>
+      <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "20px 10px 8px" }}>
+        <div style={{ flex: 1, fontSize: 10.5, fontWeight: 600, color: "var(--text-subtle)", textTransform: "uppercase", letterSpacing: ".05em" }}>Mes vues</div>
+        <button className="btn btn-ghost btn-icon btn-sm" title="Créer une vue" onClick={() => navigate("create-view")} style={{ width: 24, height: 24 }}>
+          <Icon name="plus" size={13} />
+        </button>
+      </div>
       <nav style={{ display: "flex", flexDirection: "column", gap: 2 }}>
         {VIEWS.map((v) => (
           <NavItem key={v.id} icon={v.icon} label={v.label} active={is("view", v.id)} onClick={() => navigate("view", { viewId: v.id })} badge={viewDocs(v).length} />
@@ -136,6 +141,7 @@ function App() {
   else if (route.screen === "search") screen = <Search query={route.params.query} onSearch={onSearch} onOpenDoc={onOpenDoc} onTag={onTag} />;
   else if (route.screen === "detail") screen = <Detail docId={route.params.docId} onBack={back} onOpenDoc={onOpenDoc} onTag={onTag} navigate={navigate} />;
   else if (route.screen === "view") screen = <ViewScreen viewId={route.params.viewId} viewMode={t.viewsMode} onOpenDoc={onOpenDoc} onTag={onTag} navigate={navigate} onBack={() => navigate("dashboard")} />;
+  else if (route.screen === "create-view") screen = <CreateView navigate={navigate} onOpenDoc={onOpenDoc} onTag={onTag} onCancel={back} />;
 
   return (
     <div className="app" style={{ display: "flex", height: "100%", overflow: "hidden" }}>

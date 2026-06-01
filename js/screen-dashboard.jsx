@@ -138,7 +138,7 @@ function Dashboard({ navigate, onSearch, onOpenDoc, onOpenView, onTag, onUpload,
 
         {/* Views */}
         <section style={{ marginBottom: 38 }}>
-          <SectionHeader icon="layers" title="Tes vues" sub="Des filtres, pas des dossiers" />
+          <SectionHeader icon="layers" title="Tes vues" sub="Des filtres, pas des dossiers" action={<><Icon name="plus" size={13} /> Créer une vue</>} onAction={() => navigate("create-view")} />
           {viewsMode === "tabs"
             ? <ViewTabs onOpen={onOpenView} navigate={navigate} onTag={onTag} />
             : (
